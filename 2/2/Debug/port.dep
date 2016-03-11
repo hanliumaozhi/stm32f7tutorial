@@ -1,0 +1,17 @@
+Debug/port.o: \
+ C:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/port.c \
+ C:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/FreeRTOS/Source/include/FreeRTOS.h \
+ c:\sysgcc\arm-eabi\lib\gcc\arm-eabi\5.3.0\include\stddef.h \
+ c:\sysgcc\arm-eabi\lib\gcc\arm-eabi\5.3.0\include\stdint.h \
+ c:\sysgcc\arm-eabi\arm-eabi\sys-include\stdint.h \
+ c:\sysgcc\arm-eabi\arm-eabi\sys-include\machine\_default_types.h \
+ c:\sysgcc\arm-eabi\arm-eabi\sys-include\sys\features.h \
+ c:\sysgcc\arm-eabi\arm-eabi\sys-include\sys\_intsup.h \
+ ../Inc/FreeRTOSConfig.h ../Inc/mxconstants.h \
+ C:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/FreeRTOS/Source/include/projdefs.h \
+ C:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/FreeRTOS/Source/include/portable.h \
+ C:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/FreeRTOS/Source/include/deprecated_definitions.h \
+ C:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/FreeRTOS/Source/Portable/gcc/ARM_CM7/r0p1/portmacro.h \
+ C:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/FreeRTOS/Source/include/mpu_wrappers.h \
+ C:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/FreeRTOS/Source/include/task.h \
+ C:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/FreeRTOS/Source/include/list.h
