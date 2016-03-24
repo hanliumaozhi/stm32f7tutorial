@@ -1,0 +1,24 @@
+﻿  VisualGDB: Run "cmd.exe /c "C:\SysGCC\arm-eabi\bin\make.exe" CONFIG=Debug -j8" in directory "C:\Users\han\Documents\stm32f7tutorial\3\3" on local computer
+  C:\SysGCC\arm-eabi/bin/arm-eabi-gcc.exe -ggdb -ffunction-sections -O0   -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -I../Inc -I. -IC:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F7xxxx/STM32F7xx_HAL_Driver/Inc -IC:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F7xxxx/STM32F7xx_HAL_Driver/Inc/Legacy -IC:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F7xxxx/CMSIS_HAL/Device/ST/STM32F7xx/Include -IC:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F7xxxx/CMSIS_HAL/Include -IC:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F7xxxx/CMSIS_HAL/RTOS/Template -DDEBUG=1 -DARM_MATH_CM7 -DSTM32F746IG -Dstm32_flash_layout -DSTM32F746xx  -c ../Src/main.c -o Debug/main.o -MD -MF Debug/main.dep
+  ../Src/main.c: In function 'main':
+C:\Users\han\Documents\stm32f7tutorial\3\3\..\Src\main.c(96,33): warning : passing argument 4 of 'I2C_read' from incompatible pointer type [-Wincompatible-pointer-types]
+      I2C_read(&hi2c1, 0xD0, 0x75, &i2c_data);
+                                   ^
+  In file included from ../Src/main.c:35:0:
+  C:\Users\han\Documents\stm32f7tutorial\3\3\..\Inc\i2c.h(58,9): note:  expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[16] {aka unsigned char (*)[16]}'
+   uint8_t I2C_read(I2C_HandleTypeDef* I2Cx, uint8_t device_address, uint8_t register_address, uint8_t* data);
+           ^
+C:\Users\han\Documents\stm32f7tutorial\3\3\..\Src\main.c(97,31): warning : passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+      HAL_UART_Transmit(&huart1, &i2c_data, 1, 0xffff);
+                                 ^
+  In file included from ../Inc/stm32f7xx_hal_conf.h:366:0,
+                   from C:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F7xxxx/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:48,
+                   from ../Src/main.c:34:
+  C:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_uart.h(1085,19): note:  expected 'uint8_t * {aka unsigned char *}' but argument is of type 'uint8_t (*)[16] {aka unsigned char (*)[16]}'
+   HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                     ^
+  C:\SysGCC\arm-eabi/bin/arm-eabi-g++.exe -o Debug/3.elf -Wl,-gc-sections  -TC:\Users\han\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F7xxxx/LinkerScripts/STM32F746IG_flash.lds  -mcpu=cortex-m7 -mthumb -mfloat-abi=hard   -Wl,--start-group Debug/system_stm32f7xx.o Debug/startup_stm32f746xx.o Debug/stm32f7xx_hal.o Debug/stm32f7xx_hal_adc.o Debug/stm32f7xx_hal_adc_ex.o Debug/stm32f7xx_hal_can.o Debug/stm32f7xx_hal_cec.o Debug/stm32f7xx_hal_cortex.o Debug/stm32f7xx_hal_crc.o Debug/stm32f7xx_hal_crc_ex.o Debug/stm32f7xx_hal_cryp.o Debug/stm32f7xx_hal_cryp_ex.o Debug/stm32f7xx_hal_dac.o Debug/stm32f7xx_hal_dac_ex.o Debug/stm32f7xx_hal_dcmi.o Debug/stm32f7xx_hal_dcmi_ex.o Debug/stm32f7xx_hal_dma.o Debug/stm32f7xx_hal_dma2d.o Debug/stm32f7xx_hal_dma_ex.o Debug/stm32f7xx_hal_eth.o Debug/stm32f7xx_hal_flash.o Debug/stm32f7xx_hal_flash_ex.o Debug/stm32f7xx_hal_gpio.o Debug/stm32f7xx_hal_hash.o Debug/stm32f7xx_hal_hash_ex.o Debug/stm32f7xx_hal_hcd.o Debug/stm32f7xx_hal_i2c.o Debug/stm32f7xx_hal_i2c_ex.o Debug/stm32f7xx_hal_i2s.o Debug/stm32f7xx_hal_irda.o Debug/stm32f7xx_hal_iwdg.o Debug/stm32f7xx_hal_lptim.o Debug/stm32f7xx_hal_ltdc.o Debug/stm32f7xx_hal_nand.o Debug/stm32f7xx_hal_nor.o Debug/stm32f7xx_hal_pcd.o Debug/stm32f7xx_hal_pcd_ex.o Debug/stm32f7xx_hal_pwr.o Debug/stm32f7xx_hal_pwr_ex.o Debug/stm32f7xx_hal_qspi.o Debug/stm32f7xx_hal_rcc.o Debug/stm32f7xx_hal_rcc_ex.o Debug/stm32f7xx_hal_rng.o Debug/stm32f7xx_hal_rtc.o Debug/stm32f7xx_hal_rtc_ex.o Debug/stm32f7xx_hal_sai.o Debug/stm32f7xx_hal_sai_ex.o Debug/stm32f7xx_hal_sd.o Debug/stm32f7xx_hal_sdram.o Debug/stm32f7xx_hal_smartcard.o Debug/stm32f7xx_hal_smartcard_ex.o Debug/stm32f7xx_hal_spdifrx.o Debug/stm32f7xx_hal_spi.o Debug/stm32f7xx_hal_sram.o Debug/stm32f7xx_hal_tim.o Debug/stm32f7xx_hal_tim_ex.o Debug/stm32f7xx_hal_uart.o Debug/stm32f7xx_hal_usart.o Debug/stm32f7xx_hal_wwdg.o Debug/stm32f7xx_ll_fmc.o Debug/stm32f7xx_ll_sdmmc.o Debug/stm32f7xx_ll_usb.o Debug/gpio.o Debug/i2c.o Debug/main.o Debug/stm32f7xx_hal_msp.o Debug/stm32f7xx_it.o Debug/usart.o -lcompactcpp    -Wl,--end-group
+  C:\SysGCC\arm-eabi/bin/arm-eabi-objcopy.exe -O binary Debug/3.elf Debug/3.bin
+  ------------------- Memory utilization report -------------------
+  Used FLASH: 14KB out of 1024KB (1%) [-12]
+  Used RAM: 228 bytes out of 320KB (0%)
